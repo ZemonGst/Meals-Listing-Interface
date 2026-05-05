@@ -32,8 +32,6 @@ function App() {
       if (result.error) {
         setError(true);
       } else {
-        // FreeAPI usually returns the list in result.data or result.data.data
-        // We set it as result.data in services/api.js
         setMeals(Array.isArray(result.data) ? result.data : []);
       }
       setLoading(false);
